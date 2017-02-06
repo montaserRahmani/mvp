@@ -10,7 +10,7 @@ var Link = require('./models/linkModel.js');
 var app = express();
 
 // connect to mongo database
-mongoose.connect('mongodb://localhost:27017/boardly');
+mongoose.connect(MONGODB_BOARDLY_URI);
 
 //middleware
 app.use(morgan('dev'));
@@ -50,7 +50,7 @@ app.get('/api/users/:user', handlers.handleBoards.getUserBoards);
 
 
 // start listening to requests on port 8000
-app.listen(5000);
+app.listen(process.env.PORT || 5000);
 
 // export our app for testing and flexibility, required by index.js
 module.exports = app;
