@@ -22,9 +22,7 @@ app.use(express.static(__dirname + '/../client'));
 app.use('/api/links', handlers.decodeToken);
 app.get('/api/links', handlers.handleBoards.getLinks);
 app.post('/api/links', handlers.handleBoards.addLink);
-// app.get('/', function(req,res) {
-// 	res.send("HELLO!")
-// })
+
 app.get('/api/boards', handlers.handleBoards.getBoards);
 app.use('/api/boards', handlers.decodeToken);
 app.post('/api/boards', handlers.handleBoards.addBoard);
