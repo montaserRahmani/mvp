@@ -1,0 +1,43 @@
+
+<div class="row" style="
+    background-color: #efefef;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    "><div class="col-xs-12 text-center" style="
+    padding: 30px 0px;
+">
+  <a href="#/addLink"><button class="btn btn-lg btn-primary" style="
+    margin-right: 35px;
+    ">Add new link</button>
+</a>
+<a href="#/addBoard">
+<button class="btn btn-lg btn-primary">Add new board</button>
+  </a>
+</div></div>
+
+<div class="row" id='addLink'>
+<div class="col-md-6 col-xs-12 col-md-offset-3">
+<div class="alert alert-warning" ng-model="msg">{{ msg }}</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add new link</h3>
+  </div>
+  <div class="panel-body" ng-init="getBoardsTitle()">
+    <form name="addLinkForm" ng-submit='addLink()'>
+    <div class="form-group">
+      <label>Choose board:</label>
+      <br>
+      <select ng-model="board.title" style="width: 250px; margin-bottom: 10px;">
+        <option ng-repeat="title in boardsTitle">{{ title }}</option>
+      </select>
+      <br>
+      <label>Link url:</label>
+      <input class="form-control" type='text' ng-model='link.url'>
+      </div>
+      <button  class="btn btn-md btn-primary">Add</button>
+  </form>
+  <a href="#/addBoard">Want to add new board? <strong>Click here</strong> ...</a>
+  </div>
+</div>
+</div>
+</div>

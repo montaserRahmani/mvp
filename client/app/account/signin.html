@@ -1,0 +1,37 @@
+<div class="row" id='signin'>
+<div class="col-md-6 col-xs-12 col-md-offset-3">
+<div class="alert alert-warning" ng-model="msg">{{ msg }}</div>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Sign in</h3>
+  </div>
+  <div class="panel-body">
+    <form name="signinForm" ng-submit='signin()'>
+    <div class="form-group">
+      <label>Username:</label>
+      <input class="form-control" type='text' ng-model='user.username'>
+      <br>
+      <label>Password:</label>
+      <input class="form-control" type="password" ng-model='user.password'>
+      </div>
+      <button  class="btn btn-md btn-primary">Sign in</button>
+
+  </form>
+  <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a>
+  </div>
+</div>
+</div>
+
+  <!-- <h1>signin</h1>
+  <div class="message" ng-model="msg" style="
+    margin-left: 10px;
+    background: #fff0b9;
+    padding: 10px;
+">{{ msg }}</div>
+  <form name="signinForm" ng-submit='signin()'>
+    <input type='text' ng-model='user.username'>
+    <input type="password" ng-model='user.password'>
+    <button>signin</button>
+  </form>
+  <a href="#/signup">Don't have an account? <strong>Signup</strong> ...</a> -->
+</div>

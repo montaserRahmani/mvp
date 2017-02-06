@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boardly</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap/css/bootstrap.min.css" />
+  </head>
+  <body ng-app='boardly'>
+
+  <div class="container-fluid">
+<div class="row">
+
+<nav class="navbar navbar-default" style="
+    margin-bottom: 0;
+    padding-left: 30px;
+">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#/" style="
+    color: #013356;
+">Boardly <small>beta</small></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#/profile">My Profile</a></li>
+        <li><a href="#/signin">Sign In</a></li>
+        <li><a href="#/signup">Sign Up</a></li>
+        <li><a href="#/signout">Sign out</a></li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="http://www.rbk.org" target = "_blank">RBK</a></li>
+        <li><a href="https://github.com/montaserRahmani">M. Rahmani</a></li>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="main-intro row" style="padding-bottom: 25px; margin:0px;"><div class="col-md-10 col-md-offset-1 text-center rulesContainer">
+<h1 style="
+    font-weight: bold;
+    color: #fff;
+">Welcome to Boardly!</h1>
+<h2>A place where you can share your intrest and save all related websites!</h2>
+  <div class="col-md-3">
+  <i class="glyphicon glyphicon-th ruleIcon"></i>
+  <br>
+  <span style="">Add any number of boards</span>
+</div>
+<div class="col-md-3">
+<i class="glyphicon glyphicon-link ruleIcon"></i>
+<br>
+<span>Add links that you are interseted in!</span></div><div class="col-md-3"><i class="glyphicon glyphicon glyphicon-share ruleIcon"></i>
+<br>
+<span>Share it with friends</span>
+</div>
+<div class="col-md-3">
+<i class="glyphicon glyphicon-heart ruleIcon"></i>
+<br>
+<span style="
+">HAVE FUN!</span>
+</div>
+</div></div>
+
+
+
+</div>
+    <ng-view></ng-view>
+  </div>
+  <div class="col-xs-12" style="height: 200px"></div>
+    <script src="styles/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app/account/auth.js"></script>
+    <script src="app/profile/profile.js"></script>
+    <script src="app/main/main.js"></script>
+    <script src="app/services.js"></script>
+    <script src="app/app.js"></script>
+
+  </body>
+</html>
