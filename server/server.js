@@ -10,7 +10,7 @@ var Link = require('./models/linkModel.js');
 var app = express();
 
 // connect to mongo database
-mongoose.connect(process.env.MONGODB_BOARDLY_URI || 'mongodb://localhost:27017/boardly');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/boardly');
 
 //middleware
 app.use(morgan('dev'));
