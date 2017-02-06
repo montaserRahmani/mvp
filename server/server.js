@@ -16,13 +16,15 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/boardly')
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/../client'));
+//app.use(express.static(__dirname + '/../client'));
 
 //routes
 app.use('/api/links', handlers.decodeToken);
 app.get('/api/links', handlers.handleBoards.getLinks);
 app.post('/api/links', handlers.handleBoards.addLink);
-
+app.get('/', function(req,res) {
+	res.send("HELLO!");
+})
 app.get('/api/boards', handlers.handleBoards.getBoards);
 app.use('/api/boards', handlers.decodeToken);
 app.post('/api/boards', handlers.handleBoards.addBoard);
