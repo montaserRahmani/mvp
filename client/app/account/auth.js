@@ -39,7 +39,7 @@ angular.module('boardly.auth', [])
         .then(function (token) {
           $window.localStorage.setItem('com.boardly', token);
           $window.localStorage.setItem('user.boardly', $scope.user.username);
-          $location.path('/signin');
+          $location.path('/profile');
         })
         .catch(function (error) {
           console.error(error);
