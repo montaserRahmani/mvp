@@ -82,17 +82,12 @@ module.exports.handleBoards = {
           res.json(links);
 
      })
-    // } else {
-
-      //res.status(404).send("No links");
-
-    // }
   },
 
   addBoard: function(req, res) {
     var board = req.body.board;
     var username = req.body.username;
-    //if(req.session.user){
+
       User.findOne({ username : username }).exec(function(err, user){
         if(user){
           Board.create({
@@ -109,12 +104,6 @@ module.exports.handleBoards = {
           res.status(404).json("User not found");
         }
       });
-
-    //} else {
-
-      //res.status(403).send("Not Allowed");
-
-   // }
   }, 
 
   addLink: function(req, res) {
